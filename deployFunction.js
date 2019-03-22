@@ -8,7 +8,7 @@ const {
 } = require('./awsFunctions.js');
 
 module.exports = async function deployFunction(resourceName) {
-  const zipContents = await readFile(`../setupLambda/${resourceName}.zip`)
+  const zipContents = await readFile(`../standup1Lambda/${resourceName}.zip`)
   try {
     const createFunctionParams = {
       Code: {
