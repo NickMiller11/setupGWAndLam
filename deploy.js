@@ -1,12 +1,16 @@
 const AWS = require('aws-sdk');
-const deployFunction = require('./deployFunction.js');
+const deployFunction1 = require('./deployFunction1.js');
+const deployFunction2 = require('./deployFunction2.js');
 const deployApi = require('./deployApi.js');
-const resourceName = 'standup1'
+const deploySQS = require('./deploySQS.js');
+const resourceName = 'standup1';
 
 async function deploy() {
   try {
-    await deployFunction(resourceName);
-    await deployApi(resourceName);
+    // await deployFunction1(resourceName);
+    // await deployApi(resourceName);
+    // await deploySQS(resourceName);
+    await deployFunction2();
   } catch (err) {
     console.log(err);
   }
